@@ -46,3 +46,8 @@ footer{
     margin-top:50px;
     text-align:center;
 }
+
+.dark{
+    background-color: #333;
+    color: #829e92;
+}
