@@ -41,6 +41,29 @@ h1 {
     outline: none;
 }
 
+.viewer{
+    display:none;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    top:5%;
+    bottom:5%;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr;
+    position: fixed;
+    background-color: rgba(0,0,0,0.75);
+}
+
+.viewer .close-viewer{
+    grid-row:1;
+    width: 50px;
+    height:50px;
+    justify-self: right;
+    background-color: rgba(163, 41, 41, 0.75);
+    color:white;
+}
+
 .header-content {
     display: flex;
     flex-direction: row;
@@ -111,9 +134,27 @@ footer {
     #menu-button{
         display:flex;
     }
+
+    .viewer img{
+        margin-top:None;
+        grid-row:2;
+        width:110%;
+        justify-self:center;
+        align-self:center;
+    }
 }
 @media screen and (min-width: 700px){
     .links{
         display:flex !important;
     }
+
+    .viewer img{
+        margin-top:None;
+        grid-row:2;
+        width:60%;
+        justify-self:center;
+        align-self:center;
+    }
+
+
 }
