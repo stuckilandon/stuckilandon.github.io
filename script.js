@@ -13,10 +13,11 @@ menubutton.addEventListener('click', function() {
 
 });
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded',function () {
     const modal = document.querySelector('.viewer');
     const modalImage = modal.querySelector('img');
     const closeButton = document.querySelector('.close-viewer');
+
 
     function openModal(event) {
         modalImage.src = event.target.src; 

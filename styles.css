@@ -42,7 +42,7 @@ h1 {
 }
 
 .viewer{
-    display:none;
+    z-index:100;
     padding-left: 50px;
     padding-right: 50px;
     padding-bottom: 50px;
@@ -53,6 +53,7 @@ h1 {
     grid-template-rows: 50px 1fr;
     position: fixed;
     background-color: rgba(0,0,0,0.75);
+    display:none;
 }
 
 .viewer .close-viewer{
