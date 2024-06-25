@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>Family Book Blog</title>
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <meta name = "description" content = "A family blog for commenting and rating books">
+        <meta name = "author" content = "Landon Stucki, Web Developer">
+        <link rel ="stylesheet" href = "styles.css">
+        <script src = "script.js"></script>
+    </head>
+    <body>
+        <header>
+            <img src="familybanner.png" alt ="Family Reading Together" class = "family-banner">
+            <h1>Kids Read For Fun</h1>
+        </header>
+
+        <nav>
+            <li><a href = "index.html">Home</a></li>
+            <li><a href = "about.html">About</a></li>
+            <li><a href = "recent.html">Recent</a></li>
+            <li><a href = "contact.html">Contact</a></li>
+        </nav>
+
+        <main>
+            <section aria-labelledby="filter-heading" class="filter-section">
+                <h2 id="filter-heading">Filter books by category</h2>
+                <ul>
+                    <li>
+                <label for="Age-filter">Age: </label>
+                <select id="Age-filter">
+                    <option value="all-ages">All</option>
+                    <option value="chapter-books">7-9</option>
+                    <option value="middle-grade">8-12</option>
+                    <option value="young-adults">12-18</option>
+                    <option value="new-adults">18-25</option>
+                </select>
+                </li>
+                <li>
+                    <label for="genre-filter">Genre:</label>
+                    <select id="genre-filter">
+                        <option value="all-genres">All</option>
+                        <option value="fiction">Fiction</option>
+                        <option value="non-fiction">Non-Fiction</option>
+                        <option value="mystery-thriller">Mystery/Thriller</option>
+                        <option value="romance">Romance</option>
+                        <option value="science-fiction-fantasy">Science-Fiction/Fantasy</option>
+                    </select>
+                    </li>
+                    <li>
+                        <label for="ratings-filter">Overall Ratings:</label>
+                        <select id="ratings-filter">
+                            <option value="all-ratings">All</option>
+                            <option value="1-star">1 Star+</option>
+                            <option value="2-star">2 Star+</option>
+                            <option value="3-star">3 Star+</option>
+                            <option value="4-star">4 Star+</option>
+                            <option value="5-star">5 Star+</option>
+                        </select>
+                        </li>
+                <li>
+                    <label for search-bar> Search: </label>
+                    <input type = "text" id = "search-bar" placeholder ="Find a book...">
+                </li>
+                </ul>
+
+                <section aria-labelledby="displayed-books" class="books-section">
+                    <ul>
+                        <h2>Septimus Heap Book One: Magyk</h2>
+                        <p class = "description">If you enjoy stories about seventh sons of seventh sons and magyk this is the book for you.</p>
+                        <img src ="https://upload.wikimedia.org/wikipedia/en/5/5f/Magkycover2.jpg" alt="Book Cover for Septimus Heap 1"class="book-image">
+                        <p class = "book-date">July 5, 2022</p>
+                        <p class = "book-ages">Ages 10-14</p>
+                        <p class = "book-genre">Fantasy</p>
+                        <p class = "book-stars">****</p>
+                    </ul>
+                    <ul>
+                        <h2>Magnus Chase Book One: Sword of Summer</h2>
+                        <p class = "description">The anticipated new novel by Rick Riordan. After Greek Mythology (Percy Jackson), Greek/Roman (Heroes of Olympus), and Egyptian (Kane Chronicles),
+                            Rick decides to try his hand with Norse Mythology, and the end result is good.
+                        </p>
+                        <img src = "https://books.google.com/books/content/images/frontcover/xWuyBAAAQBAJ?fife=w300" alt="Book Cover for Magnus Chase 1">
+                        <p class = "book-date">December 12, 2021</p>
+                        <p class = "book-ages">Ages 12-16</p>
+                        <p class = "book-genre">Fantasy</p>
+                        <p class = "book-stars">****</p>
+                    </ul>
+                </section>
+                
+                <secton aria-labelledby="recently-published" class = "recent-section">
+                    <h3>Recently Published</h3>
+                </secton>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Not a real Family Blog Site</p>
+        </footer>
+    </body>
+</html>
