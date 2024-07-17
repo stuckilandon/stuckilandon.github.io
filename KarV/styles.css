@@ -25,17 +25,24 @@ body {
   padding: 0;
 }
 
-
 header {
   border: ridge;
   border-width: 5px;
   border-color: black;
   border-radius: 25px;
   display: flex;
-  grid-column: 1 / 3;
-  grid-row: 1 / 2;
   align-items: center;
   background-image: linear-gradient(180deg, var(--secondary-color), var(--primary-color));
+  overflow: hidden;
+  transition: height 0.5s ease;
+}
+
+header.collapsed {
+  height: 234px; /* Adjust based on the height of the menu button and logo */
+}
+
+header.expanded {
+  height: 450px; /* Adjust based on the height needed to show the links */
 }
 
 #logo {
@@ -45,6 +52,12 @@ header {
   width: 150px;
 }
 
+#menu-button:hover {
+  background-color: var(--nav-hover-background-color);
+  color: var(--nav-hover-link-color);
+  transition-timing-function: ease-in-out;
+}
+
 #main-links {
   display: flex;
   justify-content: center;
@@ -52,14 +65,20 @@ header {
 }
 
 #main-links ul {
+  justify-content: center;
   margin: 0;
-  display: flex;
+  display: none; /* Hide links by default */
   gap: 10rem;
   font-size: 30px;
   list-style: none;
 }
 
+#main-links ul.flex {
+  display: flex !important; /* Show links when this class is added */
+}
+
 #main-links ul li a {
+  align-items: center;
   border: solid;
   border-radius: 20px;
   text-decoration: none;
@@ -78,26 +97,24 @@ header {
 #banner {
   width: 100%;
   height: 350px;
-  grid-column: 1 / 3;
-  grid-row: 2;
 }
 
-h1{
+h1 {
   text-shadow: 7px 7px black;
   font-size: 75px;
-  display:flex;
+  display: flex;
   justify-content: center;
   font-family: var(--heading-font);
-  color:var(--accent2-color);
+  color: var(--accent2-color);
 }
 
-h2{
-  display:flex;
-  justify-content:center;
+h2 {
+  display: flex;
+  justify-content: flex-start; /* Align text to the left */
   font-family: var(--heading-font);
-  color:#556b2f;
-  margin:0px;
-  padding:0px;
+  color: #556b2f;
+  margin: 0px;
+  padding: 0px;
   font-size: 50px;
 }
 
@@ -105,61 +122,61 @@ h2{
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
-  grid-column: 1 / 3;
   gap: 1rem;
   border: solid;
-  margin: 0px 100px 0px 100px;
+  margin: 0px 100px;
   padding: 30px;
 }
 
 #left-column-photo, #right-column-photo {
   border-style: ridge;
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
 #left-column-photo {
-  grid-column: 1 / 2;
-  width: 650px;
-  height: 400px;
+  width: 45vw;
+  height: 45vh;
 }
 
-p{
+p {
   font-size: 20px;
   font-family: var(--paragraph-font);
-  display:flex;
   color: var(--paragraph-color-on-color);
-  line-height:2em;
+  line-height: 2em;
 }
 
-#about-us{
+#about-us {
   grid-column: 2/3;
+  grid-row: 1/3;
+  justify-content: center;
+}
+
+#right-column-text, #left-column-text {
+  background: rgba(76,43,43,0);
+  border-radius: 25px;
+  padding: 20px;
+}
+
+#right-column-text {
+  margin-top: 75px;
+  grid-column:2/3;
   grid-row:1/3;
 }
 
-#right-column-text, #left-column-text{
-  background: rgba(76,43,43,0);
-  border-radius:25px;
-  padding:20px;
-}
-#right-column-text {
-  margin-top:75px;
-  grid-column: 2 / 3;
-  grid-row: 1/2;
-}
-
-#left-column-text{
-  margin-top:70px;
+#left-column-text {
+  margin-top: 70px;
 }
 
 #right-column-photo {
+  grid-column:2/3;
+  grid-row:2/3;
   justify-self: right;
-  margin-top:25px;
-  grid-column: 2 / 3;
-  grid-row: 2/3;
+  margin-top: 75px;
   width: 700px;
   height: 450px;
 }
+
 .testimonials {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -176,26 +193,209 @@ p{
 
 #testimonials-title {
   grid-column: 1 / 4;
-  grid-row: 1;
   justify-self: center; /* Center the heading horizontally */
   margin: 0;
   line-height: 1.6;
 }
-#test1, #test2, #test3{
-  margin:10px;
-  border-top:ridge;
-  border-width:4px;
-  border-color:black;
+
+#test1, #test2, #test3 {
+  margin: 10px;
+  border-top: ridge;
+  border-width: 4px;
+  border-color: black;
   text-align: center;
   align-items: center;
 }
 
 #test1 {
   grid-column: 1 / 2;
-  grid-row: 2;
 }
 
 #test2 {
   grid-column: 2 / 3;
-  grid-row: 2;
+}
+
+.shopscontent {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Two columns with different sizes */
+  grid-template-rows: auto auto auto auto; /* Adjust as needed for number of products */
+  gap: 1rem;
+  border: solid;
+  margin: 0px 100px;
+  padding: 30px;
+  align-items: flex-start;
+}
+
+#shop-heading {
+  text-align: center;
+}
+
+.shopscontent img {
+  border-right: ridge;
+  border-color: black;
+  max-width: 100%; /* Ensure the image takes the full width of its grid column */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Block display to respect container size */
+  float: left; /* Float the image to the left */
+  margin-right: 20px; /* Add space between the image and text */
+}
+
+#leatherbook-img, #keychain-img, #ringholder-img, #metalbottle-img {
+  grid-column: 1 / 2; /* Place the images in the first column */
+  margin-bottom: 1rem; /* Add space between each product */
+}
+
+#leatherbook-text, #keychain-text, #ringholder-text, #metalbottle-text {
+  grid-column: 2 / 3; /* Place the texts in the second column */
+  margin-bottom: 1rem; /* Add space between each product */
+}
+
+.shop-description p {
+  font-family: 'Roboto', sans-serif; /* Apply the desired font */
+  line-height: 1.8; /* Adjust the line height to add space between lines */
+  margin-bottom: 1rem; /* Optional: Add space between paragraphs */
+}
+
+.shop-description ul {
+  color: white;
+  line-height: 1.5;
+}
+
+#leatherbook-text h2, #keychain-text h2, #ringholder-text h2, #metalbottle-text h2 {
+  margin-top: 0; /* Adjust the margin as needed */
+}
+
+#leatherbook-img {
+  padding-top: 50px;
+}
+
+/* Add border to the bottom of each row */
+.shopscontent > div:nth-child(2n) {
+  border-bottom: 1px solid var(--accent1-color); /* Adjust color and thickness as needed */
+  padding-bottom: 1rem;
+}
+
+@media screen and (min-width: 942px) {
+  #main-links ul {
+    display: flex !important;
+  }
+  #menu-button {
+    display: none;
+  }
+  header{
+    height:auto !important;
+  }
+}
+
+/* Media queries for smaller screens */
+@media screen and (max-width: 941px) {
+  #menu-button {
+    margin-left: 10px;
+    cursor: pointer;
+    background: none;
+    margin-top: 10px;
+    display: flex;
+    gap: 10rem;
+    font-size: 30px;
+    border: solid;
+    border-radius: 20px;
+    text-decoration: none;
+    color: var(--nav-link-color);
+    padding: 0.5rem 1rem;
+  }
+
+  header {
+    flex-direction: column;
+  }
+
+  #logo {
+    margin-top: 10px;
+    align-items: center;
+  }
+
+  #main-links ul {
+    margin-left: -28px;
+    align-items: center;
+    line-height: 50px;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 20px;
+  }
+
+  #main-links ul li a {
+    border-radius: 0%;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  h2 {
+    justify-content: center;
+    font-size: 35px;
+  }
+
+  #shop-heading {
+    text-align: center;
+  }
+
+  .content {
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+    margin: 0px 20px;
+    padding: 15px;
+  }
+
+  #left-column-photo, #right-column-photo, #left-column-text, #right-column-text {
+    grid-column: 1;
+    text-align: center;
+  }
+
+  #right-column-text {
+    grid-row: 1/2;
+  }
+
+  #left-column-photo {
+    margin-top: 75px;
+    grid-row: 2/3;
+    width: 950px;
+    max-width: 100%;
+  }
+
+  #right-column-text {
+    grid-row: 3/4;
+  }
+
+  #right-column-photo {
+    grid-row: 4/5;
+  }
+
+  #about-us {
+    grid-column: 1;
+  }
+
+  .testimonials p {
+    font-size: 12px;
+  }
+
+  .shopscontent {
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+    margin: 0px 20px;
+    padding: 15px;
+  }
+
+  .shopscontent img {
+    float: none; /* Remove float for smaller screens */
+    margin-right: 0; /* Remove margin for smaller screens */
+    margin-bottom: 1rem; /* Add bottom margin to separate image and text */
+  }
+
+  #leatherbook-img, #keychain-img, #ringholder-img, #metalbottle-img,
+  #leatherbook-text, #keychain-text, #ringholder-text, #metalbottle-text {
+    grid-column: 1 / 2; /* Single column layout */
+    margin-bottom: 1rem;
+  }
+
+  .shop-description p {
+    font-size: 18px; /* Adjust font size for readability on smaller screens */
+  }
 }
