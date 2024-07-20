@@ -21,106 +21,26 @@
     </header>
     <img id="banner" src="banner5.png" alt="Website Banner Picture Of Laser Engraver">
     <main>
-        <h1 id = "shop-heading">July Special! 25% Off Wood Engravings!</h1>
-        <section class="grid-container">
-            <div class="shopscontent">
-                <div id="leatherbook-img">
-                  <img src="leatherbook.png" alt="Handcrafted Leather Notebook Set">
-                </div>
-                <div id="leatherbook-text">
-                  <h2>Handcrafted Leather Notebook Set</h2>
-                  <div class="shop-description">
-                    <p>Elevate your writing experience with our exquisite Handcrafted Leather Notebook Set. Made from premium quality leather, each item in this set exudes elegance and durability, perfect for those who appreciate the finer things in life.</p>
-                    <ul>
-                      <li><strong>Elegant Design:</strong> The notebook features a beautifully embossed Celtic knot design, symbolizing eternity and interconnectedness, adding a touch of sophistication to your stationery collection.</li>
-                      <li><strong>Premium Quality:</strong> Crafted from high-grade leather, this set promises longevity and a rich, tactile experience that only improves with age.</li>
-                      <li><strong>Versatile Accessories:</strong> The set includes a leather cover for your notebook, a pen holder, and additional pouches, ensuring all your writing essentials are stylishly organized.</li>
-                      <li><strong>Elastic Closure:</strong> The notebook comes with a sturdy elastic band to keep your notes secure, making it perfect for travel and everyday use.</li>
-                    </ul>
-                    <p><strong>Perfect For:</strong></p>
-                    <ul>
-                      <li>Gifting: An ideal gift for writers, artists, or anyone who loves to jot down thoughts and ideas.</li>
-                      <li>Personal Use: Enhance your daily journaling, note-taking, or sketching with a touch of luxury.</li>
-                    </ul>
-                    <p><strong>Dimensions:</strong></p>
-                    <ul>
-                      <li>Notebook: 8" x 6"</li>
-                      <li>Pen Holder: 2" x 6"</li>
-                      <li>Additional Pouches: Various sizes to fit pens, small accessories, and more.</li>
-                    </ul>
-                  </div>
-                </div>
-            
-                <!-- Key Chain -->
-                <div id="keychain-img">
-                  <img src="keychain.png" alt="Handcrafted Leather Key Chain">
-                </div>
-                <div id="keychain-text">
-                  <h2>Handcrafted Leather Key Chain</h2>
-                  <div class="shop-description">
-                    <p>Keep your keys organized and stylish with our handcrafted leather key chain. Made from premium leather and featuring a durable metal ring, this key chain is both functional and elegant. Its compact design ensures it fits comfortably in your pocket or bag, making it a perfect accessory for everyday use.</p>
-                    <ul>
-                      <li><strong>Elegant Design:</strong> The key chain features a sleek and stylish design that complements any set of keys.</li>
-                      <li><strong>Premium Quality Leather:</strong> Made from high-grade leather, ensuring durability and a luxurious feel.</li>
-                      <li><strong>Durable Metal Ring:</strong> Equipped with a sturdy metal ring to securely hold your keys.</li>
-                      <li><strong>Compact and Functional:</strong> Designed for easy carrying and practical use.</li>
-                    </ul>
-                    <p><strong>Dimensions:</strong></p>
-                    <ul>
-                      <li>Length: 4"</li>
-                      <li>Width: 1"</li>
-                    </ul>
-                  </div>
-                </div>
-            
-                <!-- Wedding Ring Holder -->
-                <div id="ringholder-img">
-                  <img src="ringengraving.png" alt="Wooden Wedding Ring Holder">
-                </div>
-                <div id="ringholder-text">
-                  <h2>Wooden Wedding Ring Holder</h2>
-                  <div class="shop-description">
-                    <p>Safeguard your precious wedding rings with our beautifully crafted wooden holder, engraved with intricate designs. This holder not only protects your rings but also adds a touch of rustic charm to your home decor. Ideal for weddings, anniversaries, or as a unique gift, it’s a keepsake that will be cherished for years.</p>
-                    <ul>
-                      <li><strong>Intricate Engraved Design:</strong> Features beautiful engravings that add a personal touch.</li>
-                      <li><strong>High-Quality Wood:</strong> Made from premium wood, ensuring durability and elegance.</li>
-                      <li><strong>Elegant and Rustic:</strong> Combines rustic charm with sophisticated design.</li>
-                      <li><strong>Perfect for Gifting:</strong> An ideal gift for weddings, anniversaries, or special occasions.</li>
-                    </ul>
-                    <p><strong>Dimensions:</strong></p>
-                    <ul>
-                      <li>Diameter: 3"</li>
-                      <li>Height: 1.5"</li>
-                    </ul>
-                  </div>
-                </div>
-            
-                <!-- Metal Bottle -->
-                <div id="metalbottle-img">
-                  <img src="bottle.png" alt="Sleek Metal Bottle">
-                </div>
-                <div id="metalbottle-text">
-                  <h2>Sleek Metal Bottle</h2>
-                  <div class="shop-description">
-                    <p>Stay hydrated in style with our sleek metal bottle. Crafted from high-quality stainless steel, this bottle is designed to keep your beverages at the perfect temperature for hours. Its modern design and durable construction make it an essential accessory for those on the go.</p>
-                    <ul>
-                      <li><strong>High-Quality Stainless Steel:</strong> Ensures durability and a sleek appearance.</li>
-                      <li><strong>Insulated:</strong> Keeps beverages cold or hot for extended periods.</li>
-                      <li><strong>Sleek and Modern Design:</strong> Combines functionality with a stylish look.</li>
-                      <li><strong>Durable and Long-Lasting:</strong> Built to withstand daily use.</li>
-                    </ul>
-                    <p><strong>Dimensions:</strong></p>
-                    <ul>
-                      <li>Height: 10"</li>
-                      <li>Capacity: 500ml</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+        <h1 id="shop-heading">July Special! 25% Off Wood Engravings!</h1>
+        <section id="shop-items-container" class="shopscontent"></section>
     </main>
     <footer>
         <p>&copy; 2024 KarV - Laser Engraving. All rights reserved.</p>
     </footer>
-    <script src = "script.js"></script>
+
+    <!-- Modal structure -->
+    <div id="checkoutModal" class="modal">
+        <div class="modal-content" id="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title">Item Title</h2>
+            <p id="modal-price">Price: $0.00</p>
+            <label for="modal-qty">Qty:</label>
+            <input type="number" id="modal-qty" class="modal-input" min="1" value="1">
+            <label for="modal-custom-words">Custom Words:</label>
+            <input type="text" id="modal-custom-words" class="modal-input">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
