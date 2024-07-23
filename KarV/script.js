@@ -194,7 +194,6 @@ shopItems.forEach((item, index) => {
     itemDiv.appendChild(textDiv);
     container.appendChild(itemDiv);
 
-    console.log(itemDiv);  // Log the entire itemDiv to ensure it is created correctly
 });
 
 function showModal(item) {
@@ -205,18 +204,16 @@ function showModal(item) {
 
     modalTitle.textContent = item.title;
     modalPrice.textContent = `Price: ${item.price} (EACH)`;
-    modalQty.value = 1; // Default value
-    modalCustomWords.value = ''; // Clear previous custom words
+    modalQty.value = 1;
+    modalCustomWords.value = '';
 
     modal.style.display = "block";
 }
 
-// Close the modal
 closeBtn.onclick = function() {
     modal.style.display = "none";
 };
 
-// Contact Page
 
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contact-form');
@@ -227,11 +224,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const email = document.getElementById('email').value;
         const message = document.getElementById('message').value;
         
+        // Haven't fully figured out what to do with the email, so for now it will just be stored
+        // ^^ In the Console.
         console.log(`Email: ${email}`);
-        console.log(`Message: ${message}`);
+        console.log(`Message: ${message}`)
         
-        // You can add more functionality here, such as sending the data to a server
         
         alert('Form submitted successfully!');
     });
 });
+

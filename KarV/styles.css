@@ -198,7 +198,7 @@ p {
 
 #testimonials-title {
   grid-column: 1 / 4;
-  justify-self: center; /* Center the heading horizontally */
+  justify-self: center; 
   margin: 0;
   line-height: 1.6;
 }
@@ -223,8 +223,8 @@ p {
 /* Shop Page Styles */
 .shopscontent {
   display: grid;
-  grid-template-columns: 1fr 2fr; /* Two columns with different sizes */
-  grid-template-rows: auto; /* Adjust as needed for number of products */
+  grid-template-columns: 1fr 2fr; 
+  grid-template-rows: auto; 
   gap: 1rem;
   border: solid;
   margin: 0px 100px;
@@ -239,33 +239,33 @@ p {
 .shopscontent img {
   border-right: ridge;
   border-color: black;
-  max-width: 100%; /* Ensure the image takes the full width of its grid column */
-  height: auto; /* Maintain aspect ratio */
-  display: block; /* Block display to respect container size */
-  float: left; /* Float the image to the left */
-  margin-right: 20px; /* Add space between the image and text */
+  max-width: 100%; 
+  height: auto; 
+  display: block; 
+  float: left; 
+  margin-right: 20px; 
 }
 
 .shop-item {
-  display: contents; /* Allow grid item children to span columns */
+  display: contents; 
 }
 
 .shop-img {
-  grid-column: 1 / 2; /* Place the images in the first column */
-  margin-bottom: 1rem; /* Add space between each product */
+  grid-column: 1 / 2; 
+  margin-bottom: 1rem; 
 }
 
 .shop-text {
   color: white;
   line-height: 1.5;
-  grid-column: 2 / 3; /* Place the texts in the second column */
-  margin-bottom: 1rem; /* Add space between each product */
+  grid-column: 2 / 3; 
+  margin-bottom: 1rem; 
 }
 
 .shop-description p {
-  font-family: 'Roboto', sans-serif; /* Apply the desired font */
-  line-height: 1.8; /* Adjust the line height to add space between lines */
-  margin-bottom: 1rem; /* Optional: Add space between paragraphs */
+  font-family: 'Roboto', sans-serif; 
+  line-height: 1.8; 
+  margin-bottom: 1rem;
 }
 
 .shop-description ul {
@@ -274,12 +274,12 @@ p {
 }
 
 .shop-text h2 {
-  margin-top: 0; /* Adjust the margin as needed */
+  margin-top: 0; 
 }
 
 /* Add border to the bottom of each row */
 .shopscontent > .shop-item:nth-child(2n) {
-  border-bottom: 1px solid var(--accent1-color); /* Adjust color and thickness as needed */
+  border-bottom: 1px solid var(--accent1-color);
   padding-bottom: 1rem;
 }
 
